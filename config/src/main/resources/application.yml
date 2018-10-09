@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/linhuiwz/config-repo.git
+  #        uri: git@github.com:linhuiwz/config-repo.git
+          username: linhuiwz
+          password: Sony$123
+   #       skip-ssl-validation: true
+          basedir: /Users/cancan/Documents/SpringCloud_Sell/config/basedir
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka1:8761/eureka/,http://eureka2:8762/eureka/
+#暴露bus的接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    bus-refresh:
+      enabled: true
