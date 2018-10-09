@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/linhuiwz/config-repo.git
+          username: linhuiwz
+          password: Sony$123
+          basedir: /Users/cancan/Documents/SpringCloud_Sell/config/basedir
+          default-label: master
+          search-paths: /**
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
